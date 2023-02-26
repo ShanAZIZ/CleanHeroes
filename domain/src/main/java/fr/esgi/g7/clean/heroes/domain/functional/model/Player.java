@@ -3,6 +3,7 @@ package fr.esgi.g7.clean.heroes.domain.functional.model;
 import lombok.Builder;
 import lombok.Value;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -11,6 +12,7 @@ import java.util.UUID;
 public class Player {
     UUID id;
     String username;
-    int coins;
-    List<Hero> deck;
+    int coins = 4;
+    List<Hero> deck = new ArrayList<>();
 }
+
