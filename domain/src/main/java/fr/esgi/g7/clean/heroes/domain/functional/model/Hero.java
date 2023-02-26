@@ -17,14 +17,4 @@ public class Hero {
     Speciality speciality;
     Scarcity scarcity;
     int level = 1;
-
-    public Hero(UUID id, String name, Speciality speciality, Scarcity scarcity) {
-        this.id = id;
-        this.name = name;
-        this.speciality = speciality;
-        this.scarcity = scarcity;
-        this.health = scarcity.getMultipliedSpec(speciality.getInitialHealth());
-        this.power = scarcity.getMultipliedSpec(speciality.getInitialPower());
-        this.armor = scarcity.getMultipliedSpec(speciality.getInitialArmor());
-    }
 }

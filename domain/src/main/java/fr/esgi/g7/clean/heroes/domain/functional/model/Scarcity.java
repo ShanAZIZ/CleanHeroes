@@ -6,20 +6,16 @@ public enum Scarcity {
     RARE("rare", 1.1),
     LEGEND("legend", 1.2);
 
-    private final String scarcity;
+    private final String label;
     private final double multiplier;
 
-    Scarcity(String scarcity, Double multiplier) {
-        this.scarcity = scarcity;
+    Scarcity(String label, Double multiplier) {
+        this.label = label;
         this.multiplier = multiplier;
     }
 
-    public String getScarcity() {
-        return scarcity;
-    }
-
-    public Double getMultiplier() {
-        return multiplier;
+    public String getLabel() {
+        return label;
     }
 
     public int getMultipliedSpec(int initialValue) {
