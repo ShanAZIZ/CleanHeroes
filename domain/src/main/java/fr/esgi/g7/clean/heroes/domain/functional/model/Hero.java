@@ -11,10 +11,10 @@ public class Hero {
     UUID id;
     String name;
     int health;
-    int experience = 0;
+    int experience;
     int power;
     int armor;
     Speciality speciality;
     Scarcity scarcity;
-    int level = 1;
+    int level;
 }

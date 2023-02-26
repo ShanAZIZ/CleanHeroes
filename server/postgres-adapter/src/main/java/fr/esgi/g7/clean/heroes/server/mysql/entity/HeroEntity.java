@@ -1,7 +1,5 @@
 package fr.esgi.g7.clean.heroes.server.mysql.entity;
 
-import fr.esgi.g7.clean.heroes.domain.functional.model.Scarcity;
-import fr.esgi.g7.clean.heroes.domain.functional.model.Speciality;
 import lombok.*;
 
 import javax.persistence.Column;
@@ -32,9 +30,9 @@ public class HeroEntity {
     @Column
     int armor;
     @Column // TODO: manage enum in persisting
-    Speciality speciality;
+    String speciality;
     @Column
-    Scarcity scarcity;
+    String scarcity;
     @Column
     int level = 1;
 }

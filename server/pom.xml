@@ -12,7 +12,7 @@
     <artifactId>server</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>mysql-adapter</module>
+        <module>postgres-adapter</module>
     </modules>
 
     <properties>
