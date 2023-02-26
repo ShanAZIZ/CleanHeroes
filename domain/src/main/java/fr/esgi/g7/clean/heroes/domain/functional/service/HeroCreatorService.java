@@ -18,12 +18,13 @@ public class HeroCreatorService implements HeroCreatorApi {
     public Optional<Hero> create(String name, Scarcity scarcity, Speciality speciality) {
         Hero hero =  Hero.builder()
                 .name(name)
-//                .id(id) TODO: manage UUID ?
                 .speciality(speciality)
                 .scarcity(scarcity)
                 .health(scarcity.getMultipliedSpec(speciality.getInitialHealth()))
                 .power(scarcity.getMultipliedSpec(speciality.getInitialPower()))
                 .armor(scarcity.getMultipliedSpec(speciality.getInitialArmor()))
+                .experience(0)
+                .level(1)
                 .build();
         return spi.save(hero);
     }
