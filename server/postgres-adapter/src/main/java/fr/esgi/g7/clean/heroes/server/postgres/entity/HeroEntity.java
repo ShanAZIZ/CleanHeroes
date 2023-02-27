@@ -1,10 +1,7 @@
 package fr.esgi.g7.clean.heroes.server.postgres.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.Id;
 
 import java.util.UUID;
 

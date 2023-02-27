@@ -7,4 +7,5 @@ import org.springframework.context.annotation.Import;
 @Configuration
 @Import({DomainConfiguration.class})
 public class ApplicationConfiguration {
+
 }
