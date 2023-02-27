@@ -16,6 +16,7 @@ import java.util.UUID;
 public class HeroEntity {
     @Id
     @EqualsAndHashCode.Include
+    @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;
     @Column(unique = true)
     String name;

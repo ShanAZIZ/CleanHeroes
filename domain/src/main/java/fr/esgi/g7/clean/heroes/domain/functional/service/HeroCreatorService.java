@@ -15,17 +15,24 @@ public class HeroCreatorService implements HeroCreatorApi {
     private final HeroPersistenceSpi spi;
 
     @Override
-    public Optional<Hero> create(String name, Scarcity scarcity, Speciality speciality) {
-        Hero hero =  Hero.builder()
-                .name(name)
-                .speciality(speciality)
-                .scarcity(scarcity)
-                .health(scarcity.getMultipliedSpec(speciality.getInitialHealth()))
-                .power(scarcity.getMultipliedSpec(speciality.getInitialPower()))
-                .armor(scarcity.getMultipliedSpec(speciality.getInitialArmor()))
-                .experience(0)
-                .level(1)
-                .build();
-        return spi.save(hero);
+    public Optional<Hero> create(String name, String scarcity, String speciality) {
+        try {
+            Speciality spec = Speciality.valueOf(speciality);
+            Scarcity scarce = Scarcity.valueOf(scarcity);
+            Hero hero =  Hero.builder()
+                    .name(name)
+                    .speciality(spec)
+                    .scarcity(scarce)
+                    .health(scarce.getMultipliedSpec(spec.getInitialHealth()))
+                    .power(scarce.getMultipliedSpec(spec.getInitialPower()))
+                    .armor(scarce.getMultipliedSpec(spec.getInitialArmor()))
+                    .experience(0)
+                    .level(1)
+                    .build();
+            return spi.save(hero);
+        }catch (IllegalArgumentException e) {
+            return Optional.empty();
+        }
+
     }
 }

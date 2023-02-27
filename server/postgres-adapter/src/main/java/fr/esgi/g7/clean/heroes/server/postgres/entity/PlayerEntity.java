@@ -16,11 +16,12 @@ import java.util.UUID;
 public class PlayerEntity {
     @Id
     @EqualsAndHashCode.Include
+    @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;
     @Column(unique = true)
     String username;
     @Column
     int coins = 4;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL) // TODO: confirm cascade
     List<HeroEntity> deck;
 }

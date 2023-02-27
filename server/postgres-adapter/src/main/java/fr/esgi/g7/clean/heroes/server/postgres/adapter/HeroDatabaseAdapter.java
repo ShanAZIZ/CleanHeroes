@@ -26,6 +26,7 @@ public class HeroDatabaseAdapter implements HeroPersistenceSpi {
         try {
             return Optional.of(HeroEntityMapper.toDomain(heroRepository.save(entity)));
         }
+        // TODO: manage error ?
         catch (Exception e) {
             return Optional.empty();
         }

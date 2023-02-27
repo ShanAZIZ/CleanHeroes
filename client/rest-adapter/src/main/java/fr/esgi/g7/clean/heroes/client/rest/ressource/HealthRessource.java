@@ -13,6 +13,6 @@ public class HealthRessource {
 
     @GetMapping
     public ResponseEntity<String> health() {
-        return ResponseEntity.of(Optional.of("App is running"));
+        return ResponseEntity.of(Optional.of("Application is running"));
     }
 }
