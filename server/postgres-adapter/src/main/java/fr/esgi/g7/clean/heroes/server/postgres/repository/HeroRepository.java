@@ -1,6 +1,6 @@
-package fr.esgi.g7.clean.heroes.server.mysql.repository;
+package fr.esgi.g7.clean.heroes.server.postgres.repository;
 
-import fr.esgi.g7.clean.heroes.server.mysql.entity.HeroEntity;
+import fr.esgi.g7.clean.heroes.server.postgres.entity.HeroEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

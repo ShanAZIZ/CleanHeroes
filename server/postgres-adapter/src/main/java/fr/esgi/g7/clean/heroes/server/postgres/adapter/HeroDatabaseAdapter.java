@@ -1,9 +1,9 @@
-package fr.esgi.g7.clean.heroes.server.mysql.adapter;
+package fr.esgi.g7.clean.heroes.server.postgres.adapter;
 
 import fr.esgi.g7.clean.heroes.domain.functional.model.Hero;
 import fr.esgi.g7.clean.heroes.domain.ports.server.HeroPersistenceSpi;
-import fr.esgi.g7.clean.heroes.server.mysql.mapper.HeroEntityMapper;
-import fr.esgi.g7.clean.heroes.server.mysql.repository.HeroRepository;
+import fr.esgi.g7.clean.heroes.server.postgres.mapper.HeroEntityMapper;
+import fr.esgi.g7.clean.heroes.server.postgres.repository.HeroRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.val;
 import org.springframework.stereotype.Service;

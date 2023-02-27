@@ -1,9 +1,9 @@
-package fr.esgi.g7.clean.heroes.server.mysql.mapper;
+package fr.esgi.g7.clean.heroes.server.postgres.mapper;
 
 import fr.esgi.g7.clean.heroes.domain.functional.model.Hero;
 import fr.esgi.g7.clean.heroes.domain.functional.model.Scarcity;
 import fr.esgi.g7.clean.heroes.domain.functional.model.Speciality;
-import fr.esgi.g7.clean.heroes.server.mysql.entity.HeroEntity;
+import fr.esgi.g7.clean.heroes.server.postgres.entity.HeroEntity;
 
 public interface HeroEntityMapper {
 

@@ -1,11 +1,11 @@
-package fr.esgi.g7.clean.heroes.server.mysql.entity;
+package fr.esgi.g7.clean.heroes.server.postgres.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.*;
+import org.springframework.data.annotation.Id;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.util.UUID;
 
 @Entity
@@ -17,7 +17,8 @@ import java.util.UUID;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Table(name = "hero")
 public class HeroEntity {
-    @Id @EqualsAndHashCode.Include
+    @Id
+    @EqualsAndHashCode.Include
     UUID id;
     @Column(unique = true)
     String name;
@@ -29,7 +30,7 @@ public class HeroEntity {
     int power;
     @Column
     int armor;
-    @Column // TODO: manage enum in persisting
+    @Column
     String speciality;
     @Column
     String scarcity;
