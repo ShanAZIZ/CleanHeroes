@@ -5,15 +5,17 @@ import fr.esgi.g7.clean.heroes.domain.functional.model.Player;
 import fr.esgi.g7.clean.heroes.domain.ports.server.PlayerPersistenceSpi;
 import lombok.RequiredArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 @RequiredArgsConstructor
 public class PlayerCreatorService implements PlayerCreatorApi {
 
-    PlayerPersistenceSpi spi;
+    private final PlayerPersistenceSpi spi;
 
     @Override
-    public Optional<Player> create(Player player) {
-        return spi.save(player);
+    public Optional<Player> create(String username) {
+        Player p = Player.builder().username(username).coins(4).deck(new ArrayList<>()).build();
+        return spi.save(p);
     }
 }
